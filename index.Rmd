@@ -28,19 +28,19 @@ viz4 = url(map4link)
 
 ## Intro {.sidebar}
 
-I can give some textual explanation here!
+En el caso del departamento de Lima, los cuatro métodos muestran patrones espaciales similares en las principales zonas de concentración; sin embargo, se observan diferencias en algunos distritos periféricos, donde la definición de los vecinos modifica la clasificación de determinados Hot Spots y Outliers.
 
 
 ## Column {data-width="450"}
 
-### GIVE ME A TITLE 1 <!-- a title for plot -->
+### VECINDARIO QUEEN <!-- a title for plot -->
 
 ```{r}
 
 readRDS(viz1)
 ```
 
-### GIVE ME A TITLE 2
+### VECINDARIO ROOK
 
 ```{r}
 
@@ -49,13 +49,13 @@ readRDS(viz2)
 
 ## Column {data-width="550"}
 
-### GIVE ME A TITLE 3
+### VECINDARIO KNN
 
 ```{r}
 readRDS(viz3)
 ```
 
-### GIVE ME A TITLE 4
+### DISTANCE BAND - 30KM
 
 ```{r}
 readRDS(viz4)
