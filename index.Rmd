@@ -1,0 +1,62 @@
+---
+title: "My Dashbord at IAS"
+output: 
+  flexdashboard::flex_dashboard:
+---
+
+
+```{r setup, include=FALSE}
+library(flexdashboard) # always
+library(ggplot2)
+library(sf)
+```
+
+```{r}
+# 1. Definimos los links directos a tus 4 mapas RDS en tu GitHub (con /raw/main/)
+map1link = "https://github.com/Frazambito/EVAL-FINAL/raw/main/map1.rds"
+map2link = "https://github.com/Frazambito/EVAL-FINAL/raw/main/map2.rds"
+map3link = "https://github.com/Frazambito/EVAL-FINAL/raw/main/map3.rds"
+map4link = "https://github.com/Frazambito/EVAL-FINAL/raw/main/map4.rds"
+
+# 2. Usamos la función url() que es la que no te da fallos según el profe
+viz1 = url(map1link)
+viz2 = url(map2link)
+viz3 = url(map3link)
+viz4 = url(map4link)
+```
+
+
+## Intro {.sidebar}
+
+I can give some textual explanation here!
+
+
+## Column {data-width="450"}
+
+### GIVE ME A TITLE 1 <!-- a title for plot -->
+
+```{r}
+
+readRDS(viz1)
+```
+
+### GIVE ME A TITLE 2
+
+```{r}
+
+readRDS(viz2)
+```
+
+## Column {data-width="550"}
+
+### GIVE ME A TITLE 3
+
+```{r}
+readRDS(viz3)
+```
+
+### GIVE ME A TITLE 4
+
+```{r}
+readRDS(viz4)
+```
